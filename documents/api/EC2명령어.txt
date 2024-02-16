@@ -1,0 +1,28 @@
+# EC2 접속
+
+1. 키(pem)이 있는 폴더에서 cmd 창 열기 (또는 git bash 사용)
+
+2. ssh -i I10A410T.pem ubuntu@i10a410.p.ssafy.io
+
+3. sudo su
+
+# 데이터 베이스 확인하기
+
+1. docker ps
+(MariaDB container id 확인하기)
+
+2. docker exec -it 컨테이너아이디 bash
+docker exec -it 73332da03f76 bash
+docker exec -it mariadb bash
+mariadb -u team10 -p
+D@g102g2g
+
+3. mariadb -u team10 -p
+(비밀번호 : D@g102g2g)
+
+4. use munggle
+
+# 로그 확인
+
+docker logs munggle-api
+docker logs mariadb
